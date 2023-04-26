@@ -5,31 +5,23 @@
         icon: string;
         title: string;
         text: string;
-        button: string;
-        id: string;
     }
 
     const services: Services[] = [
         {
             icon: "ic:outline-access-time", 
             title: "Nonstop", 
-            text: "Sme vám dostupný nepretržite - 24 hodín denne, 7 dní v týždni.", 
-            button: "Zistiť viac",
-            id: "1"
+            text: "Sme vám dostupný nepretržite - 24 hodín denne, 7 dní v týždni."
         },
         {
             icon: "material-symbols:speed-outline", 
             title: "Rýchlosť", 
-            text: "Sme u vás v priebehu 30 minút (Nitra a okolie)", 
-            button: "Zistiť viac",
-            id: "3"
+            text: "Sme u vás v priebehu 30 minút (Nitra a okolie)"
         },
         {
             icon: "game-icons:european-flag", 
             title: "Pokrytie", 
-            text: "Naše služby poskytujeme po celej Slovenskej republike a Európskej únii.", 
-            button: "Zistiť viac",
-            id: "2"
+            text: "Naše služby poskytujeme po celej Slovenskej republike a Európskej únii."
         },
     ]
 </script>
@@ -44,12 +36,12 @@
             Ponúkame vám rýchlu a odbornú pomoc s každým problémom, ktorý vás môže postihnúť na ceste.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-6 mt-8">
-            {#each services as {icon, title, text, button, id}}
+            {#each services as {icon, title, text}}
                 <div class="col-span-1">
                     <div class="flex flex-col items-center text-black h-full">
-                        <a href="/sluzby?service={id}" class="transition-all duration-150 text-accent text-8xl mb-6 hover:scale-110"> <!-- Icon Box -->
+                        <span class="transition-all duration-150 text-accent text-8xl mb-6 hover:scale-110"> <!-- Icon Box -->
                             <Icon icon={icon} />
-                        </a>
+                        </span>
                         <h5 class="font-bold text-xl mb-4">
                             {title}
                         </h5>

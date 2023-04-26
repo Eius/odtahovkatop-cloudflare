@@ -1,34 +1,48 @@
 <script lang="ts">
 	import Icon from "@iconify/svelte";
 
-    interface Benefit {
-        icon: string;
+    interface Service {
+        img: string;
         title: string;
         text: string;
-        button: string;
         id: string;
     }
 
-    const benefits: Benefit[] = [
+    const services: Service[] = [
         {
-            icon: "ic:outline-access-time", 
-            title: "Nonstop", 
-            text: "Sme vám dostupný nepretržite - 24 hodín denne, 7 dní v týždni.", 
-            button: "Zistiť viac",
+            img: "https://placehold.co/400x250", 
+            title: "Lorem Ipsum Dolor 1", 
+            text: "Sed quis dui in enim sagittis accumsan non at dui. Proin consectetur, sapien in dictum.",
             id: "1"
         },
         {
-            icon: "material-symbols:speed-outline", 
-            title: "Rýchlosť", 
-            text: "Sme u vás v priebehu 30 minút (Nitra a okolie)", 
-            button: "Zistiť viac",
+            img: "https://placehold.co/400x250", 
+            title: "Lorem Ipsum Dolor 2", 
+            text: "Nam ante dolor, bibendum vitae ligula quis, imperdiet dignissim leo. Sed non venenatis tellus.",
             id: "3"
         },
         {
-            icon: "game-icons:european-flag", 
-            title: "Pokrytie", 
-            text: "Naše služby poskytujeme po celej Slovenskej republike a Európskej únii.", 
-            button: "Zistiť viac",
+            img: "https://placehold.co/400x250", 
+            title: "Lorem Ipsum Dolor 3", 
+            text: "Proin malesuada volutpat velit id condimentum. Suspendisse nec mi quis turpis convallis aliquet.",
+            id: "2"
+        },
+        {
+            img: "https://placehold.co/400x250", 
+            title: "Lorem Ipsum Dolor 4", 
+            text: "Sed quis dui in enim sagittis accumsan non at dui. Proin consectetur, sapien in dictum.",
+            id: "1"
+        },
+        {
+            img: "https://placehold.co/400x250", 
+            title: "Lorem Ipsum Dolor 5", 
+            text: "Nam ante dolor, bibendum vitae ligula quis, imperdiet dignissim leo. Sed non venenatis tellus.",
+            id: "3"
+        },
+        {
+            img: "https://placehold.co/400x250", 
+            title: "Lorem Ipsum Dolor 6", 
+            text: "Proin malesuada volutpat velit id condimentum. Suspendisse nec mi quis turpis convallis aliquet.",
             id: "2"
         },
     ]
@@ -40,14 +54,21 @@
 			<span class="font-light">Naše </span><span class="font-bold">služby</span>
 		</h1>
 		<div class="h-1 w-[30px] bg-accent mx-auto my-4 -skew-x-30" />
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-6 mt-8">
-            {#each benefits as {icon, title, text, button, id}}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mt-8">
+            {#each services as {img, title, text, id}}
                 <div class="col-span-1">
-                    <div class="flex flex-col items-center text-black h-full">
-                        
+                    <div class="flex flex-col text-center text-black h-full">
+                        <img src={img} alt={title} class="mb-4 rounded">
+                        <h1 class="text-3xl font-medium mb-2">{title}</h1>
+                        <p>{text}</p>
                     </div>
                 </div>
             {/each}
+            <div class="col-span-1 md:col-span-2 lg:col-span-3 text-center mt-12">
+                <a href="/sluzby" class="group bg-accent hover:bg-white border-accent border-2 transition-colors rounded py-4 px-8">
+                    <span class="text-white group-hover:text-accent transition-colors">Všetky služby</span>
+                </a>
+            </div>
         </div>
 	</div>
 </section>
