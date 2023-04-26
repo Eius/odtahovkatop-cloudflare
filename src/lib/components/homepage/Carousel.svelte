@@ -4,7 +4,7 @@
 
 	const slides: { src: string; alt: string }[] = [
 		{
-			src: '/home-slide-1.jpg',
+			src: '/home-slide-2.jpg',
 			alt: 'Slide 1'
 		},
 		{
