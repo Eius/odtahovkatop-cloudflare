@@ -1,6 +1,7 @@
 <script lang="ts">
     import {onMount, onDestroy } from 'svelte';
 	import Icon from '@iconify/svelte';
+	import {fly} from 'svelte/transition';
 
 	interface T {
 		icon: string;
@@ -66,12 +67,14 @@
     
 	let targetElement: HTMLElement;
 	let observer: IntersectionObserver;
+	let visible = false;
     onMount(() => {
 		if (!targetElement) {return;}
 		observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					observer?.disconnect();
+					visible = true;
 					startCounter();
 				}
 			});
@@ -87,8 +90,9 @@
 
 <section class="bg-primary py-8">
 	<div class="container grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4" bind:this={targetElement}>
+		{#if visible}
 		{#each numberStats as { icon, number, suffix, text }, index}
-			<div class="col-span-1">
+			<div class="col-span-1" transition:fly={{delay: 200, duration: 500, x: -100}}>
 				<div class="flex flex-col items-center">
 					<div class="text-accent text-7xl mb-4">
 						<!-- Icon Box -->
@@ -99,5 +103,6 @@
 				</div>
 			</div>
 		{/each}
+		{/if}
 	</div>
 </section>
