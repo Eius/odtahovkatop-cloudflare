@@ -1,0 +1,42 @@
+<script lang="ts">
+	import { PhoneNumber } from '$lib/data/ContactInfo';
+	import Icon from '@iconify/svelte';
+</script>
+
+<div class="bg-secondary text-white">
+	<div class="container md:flex items-center md:justify-between">
+		<div class="py-2 hidden md:block">
+			<div class="flex justify-center">
+				<div class="flex items-center mr-2 text-2xl">
+					<Icon icon="mdi:tow-truck" />
+				</div>
+				<p>Odťahové služby po celej <span class="text-yellow">SR</span> a <span class="text-yellow">EÚ</span></p>
+			</div>
+		</div>
+		<div class="py-2">
+			<div class="flex justify-center">
+				<div class="flex items-center mr-2 text-2xl">
+					<Icon icon="material-symbols:phone-iphone" />
+				</div>
+				<p>
+					<!-- <span class="inline md:hidden mr-1">Núdzový kontakt:</span> -->
+					<a href="tel:{PhoneNumber}" class="underline text-2xl md:text-lg text-yellow">{PhoneNumber}</a>
+				</p>
+			</div>
+		</div>
+		<div class="py-2 hidden md:block">
+			<div class="flex justify-center">
+				<div class="flex items-center mr-2 text-2xl">
+					<Icon icon="ic:outline-access-time-filled" />
+				</div>
+				<p>Sme Vám k dispozícii <span class="text-yellow">NONSTOP</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style lang="postcss">
+	
+
+	
+</style>
