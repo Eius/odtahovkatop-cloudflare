@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {onMount} from 'svelte';
+    import {onMount, onDestroy } from 'svelte';
 	import Icon from '@iconify/svelte';
 
 	interface T {
@@ -63,15 +63,30 @@
             }, delay);
         }
     }
-    // TODO: add intersection observer to start counter when in viewport
+    
+	let targetElement: HTMLElement;
+	let observer: IntersectionObserver;
     onMount(() => {
-        startCounter();
+		if (!targetElement) {return;}
+		observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					observer?.disconnect();
+					startCounter();
+				}
+			});
+		});
+		observer.observe(targetElement);
     });
+
+	onDestroy(() => {
+		observer?.disconnect();
+	});
     
     </script>
 
 <section class="bg-primary py-8">
-	<div class="container grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+	<div class="container grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4" bind:this={targetElement}>
 		{#each numberStats as { icon, number, suffix, text }, index}
 			<div class="col-span-1">
 				<div class="flex flex-col items-center">
