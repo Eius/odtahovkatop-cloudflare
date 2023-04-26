@@ -66,14 +66,14 @@
 </script>
 
 <section class="bg-white py-24">
-	<div class="container" bind:this={targetElement}>
-        {#if visible}
-        <div transition:fly={{delay: 200, duration: 500, x: -100}}>
-            <h1 class="text-center text-4xl text-black uppercase">
-                <span class="font-light">Naše </span><span class="font-bold">služby</span>
-            </h1>
-            <div class="h-1 w-[30px] bg-accent mx-auto my-4 -skew-x-30" />
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mt-8">
+	<div class="container">
+        <h1 class="text-center text-4xl text-black uppercase">
+            <span class="font-light">Naše </span><span class="font-bold">služby</span>
+        </h1>
+        <div class="h-1 w-[30px] bg-accent mx-auto my-4 -skew-x-30" />
+        <div bind:this={targetElement}>
+            {#if visible}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mt-8" transition:fly={{delay: 200, duration: 500, x: -100}}>
                 {#each services as {img, title, text, id}}
                     <div class="col-span-1">
                         <div class="flex flex-col text-center text-black h-full">
@@ -89,8 +89,8 @@
                     </a>
                 </div>
             </div>
+            {/if}
         </div>
-        {/if}
 	</div>
 </section>
 
