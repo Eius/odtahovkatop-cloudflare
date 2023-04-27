@@ -43,7 +43,7 @@
 	}
 </script>
 
-<nav class="sticky top-0 z-40 bg-primary">
+<nav class="sticky top-0 z-40 bg-primary border-b border-white">
 	<div class="container mx-auto flex justify-between items-center">
 		<div class="transition-all ease-in-out max-w-[270px] py-4 duration-150" bind:this={logoWrapper}>
 			<img src="/Logo.png" alt="" height="100" width="400" />

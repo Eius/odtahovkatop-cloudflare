@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Divider from "$lib/components/Divider.svelte";
-	import { PhoneNumber } from "$lib/data/ContactInfo";
+	import { PhoneNumber, Email } from "$lib/data/ContactInfo";
 	import ContactRow from "./ContactRow.svelte";
 	import FooterMenuItem from "./FooterMenuItem.svelte";
 
@@ -45,7 +45,7 @@
                 </h3>
                 <Divider marginY="mb-4" marginX="mx-0" width="w-[144px]" />
                 <ul class="flex flex-col gap-2 items-center md:items-start">
-                    <ContactRow icon="material-symbols:mail-rounded" text="info@odtahovka.top" />
+                    <ContactRow icon="material-symbols:mail-rounded" text={Email} />
                     <ContactRow icon="material-symbols:phone-enabled" text={PhoneNumber} />
                     <ContactRow icon="ic:outline-access-time" text="24 hodín denne, 7 dní v týždni" />
                 </ul>

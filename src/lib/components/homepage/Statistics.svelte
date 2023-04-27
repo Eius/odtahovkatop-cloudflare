@@ -75,7 +75,9 @@
 				if (entry.isIntersecting) {
 					observer?.disconnect();
 					visible = true;
-					startCounter();
+					setTimeout(() => {
+						startCounter();
+					}, 250);
 				}
 			});
 		});
@@ -98,7 +100,7 @@
 						<!-- Icon Box -->
 						<Icon {icon} />
 					</div>
-					<p class="text-white font-bold text-3xl mb-2" id="stat-{index}">{number} {suffix}</p>
+					<p class="text-white font-bold text-3xl mb-2" id="stat-{index}">0 {suffix}</p>
 					<p class="text-white text-center uppercase">{text}</p>
 				</div>
 			</div>

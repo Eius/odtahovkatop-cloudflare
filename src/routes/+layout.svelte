@@ -21,9 +21,4 @@
 		<slot />
 	</main>
 	<Footer />
-
 </div>
-
-<style lang="scss">
-
-</style>
