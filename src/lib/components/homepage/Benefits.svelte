@@ -2,6 +2,7 @@
 	import Icon from "@iconify/svelte";
     import {fly} from "svelte/transition"
     import {onMount} from "svelte"
+	import Divider from "../Divider.svelte";
 
     let visible = false;
 
@@ -50,7 +51,7 @@
         <h1 class="text-center text-4xl text-black uppercase">
             <span class="font-light">Naše </span><span class="font-bold">výhody</span>
         </h1>
-        <div class="h-1 w-[30px] bg-accent mx-auto my-4 -skew-x-30" />
+        <Divider />
         <p class="text-black text-center max-w-[500px] mx-auto leading-relaxed">
             Ponúkame vám rýchlu a odbornú pomoc s každým problémom, ktorý vás môže postihnúť na ceste.
         </p>

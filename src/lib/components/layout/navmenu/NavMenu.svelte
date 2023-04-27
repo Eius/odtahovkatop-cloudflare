@@ -46,7 +46,7 @@
 <nav class="sticky top-0 z-40 bg-primary">
 	<div class="container mx-auto flex justify-between items-center">
 		<div class="transition-all ease-in-out max-w-[270px] py-4 duration-150" bind:this={logoWrapper}>
-			<img src="https://placehold.co/400x100" alt="" height="100" width="400" />
+			<img src="/Logo.png" alt="" height="100" width="400" />
 		</div>
 		<ul class="hidden md:flex items-center gap-6">
 			<NavMenuItem href="/" name="Úvod" />
