@@ -6,8 +6,8 @@
 	import "@fontsource/roboto/900.css";
 	import "$lib/styles/global.css"
 	
-	import NavMenu from "$lib/components/layout/navmenu/NavMenu.svelte";
-	import FooterMenu from "$lib/components/layout/footer/FooterMenu.svelte";
+	import Nav from "$lib/components/layout/navmenu/Nav.svelte";
+	import Footer from "$lib/components/layout/footer/Footer.svelte";
 </script>
 
 <svelte:head>
@@ -16,11 +16,11 @@
 </svelte:head>
 
 <div class="app">
-	<NavMenu />
+	<Nav />
 	<main>
 		<slot />
 	</main>
-	<FooterMenu />
+	<Footer />
 
 </div>
 

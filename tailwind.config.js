@@ -17,6 +17,7 @@ export default {
       "black": "#000000",
       "gray": "#B4B4B4",
       "yellow": "#F4E04D",
+      "facebook": "#1778f2",
       "primary": "#2b2424",
       "secondary": "#161010",
       "accent": "#d42020",
