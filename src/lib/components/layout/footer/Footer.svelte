@@ -10,26 +10,26 @@
 <footer class="bg-primary">
     <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-8 py-8">
         <div class="col-span-1">
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center md:items-start">
                 <h3 class="text-white uppercase">
                     <span class="font-light">Sociálne</span>
                     <span class="font-bold">siete</span>
                 </h3>
-                <Divider />
-                <img src="/Logo.png" alt="" height="100" width="400" class="max-w-[230px]" />
+                <Divider marginY="mb-4" marginX="mx-0" width="w-[120px]" />
                 <a href="https://www.facebook.com/profile.php?id=100063504850544" class="text-white group">
+                <img src="/Logo.png" alt="" height="100" width="400" class="max-w-[230px]" />
                     Sledujte nás na <span class="transition-colors duration-150 group-hover:text-facebook">Facebooku</span>!
                 </a>
             </div>
         </div>
         <div class="col-span-1">
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center md:items-start">
                 <h3 class="text-white uppercase">
                     <span class="font-light">Užitočné</span>
                     <span class="font-bold">odkazy</span>
                 </h3>
-                <Divider />
-                <ul class="flex flex-col gap-2 items-center">
+                <Divider marginY="mb-4" marginX="mx-0" width="w-[140px]" />
+                <ul class="flex flex-col gap-2 items-center md:items-start">
                     <FooterMenuItem href="/" name="Úvod" />
                     <FooterMenuItem href="/sluzby" name="Služby" />
                     <FooterMenuItem href="/cennik" name="Cenník" />
@@ -38,13 +38,13 @@
             </div>
         </div>
         <div class="col-span-1">
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center md:items-start">
                 <h3 class="text-white uppercase">
                     <span class="font-light">Kontaktujte</span>
                     <span class="font-bold">nás</span>
                 </h3>
-                <Divider />
-                <ul class="flex flex-col gap-2 items-center">
+                <Divider marginY="mb-4" marginX="mx-0" width="w-[144px]" />
+                <ul class="flex flex-col gap-2 items-center md:items-start">
                     <ContactRow icon="material-symbols:mail-rounded" text="info@odtahovka.top" />
                     <ContactRow icon="material-symbols:phone-enabled" text={PhoneNumber} />
                     <ContactRow icon="ic:outline-access-time" text="24 hodín denne, 7 dní v týždni" />
