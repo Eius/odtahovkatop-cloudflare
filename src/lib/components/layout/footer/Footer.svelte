@@ -3,6 +3,8 @@
 	import { PhoneNumber } from "$lib/data/ContactInfo";
 	import ContactRow from "./ContactRow.svelte";
 	import FooterMenuItem from "./FooterMenuItem.svelte";
+
+    const currentYear = new Date().getFullYear();
 </script>
 
 <footer class="bg-primary">
@@ -51,6 +53,6 @@
         </div>
     </div>
     <div class="bg-secondary">
-        <p class="text-white text-center py-4">24/7 - Odťahovka TOP Nonstop | Všetky práva vyhradené © 2023</p>
+        <p class="text-white text-center py-4">24/7 - Odťahovka TOP Nonstop | Všetky práva vyhradené © {currentYear}</p>
     </div>
 </footer>
