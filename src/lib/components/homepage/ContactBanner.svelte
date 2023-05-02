@@ -10,7 +10,7 @@
 				<div class="flex items-center mr-2 text-2xl">
 					<Icon icon="mdi:tow-truck" />
 				</div>
-				<p>Odťahové služby po celej <span class="text-yellow">SR</span> a <span class="text-yellow">EÚ</span></p>
+				<p>Odťahové služby po celej <span class="text-accent-2">SR</span> a <span class="text-accent-2">EÚ</span></p>
 			</div>
 		</div>
 		<div class="py-2">
@@ -20,7 +20,7 @@
 				</div>
 				<p>
 					<!-- <span class="inline md:hidden mr-1">Núdzový kontakt:</span> -->
-					<a href="tel:{PhoneNumber}" class="underline text-2xl md:text-lg text-yellow">{PhoneNumber}</a>
+					<a href="tel:{PhoneNumber}" class="underline text-2xl md:text-lg text-accent-2">{PhoneNumber}</a>
 				</p>
 			</div>
 		</div>
@@ -29,7 +29,7 @@
 				<div class="flex items-center mr-2 text-2xl">
 					<Icon icon="ic:outline-access-time-filled" />
 				</div>
-				<p>Sme Vám k dispozícii <span class="text-yellow">NONSTOP</span></p>
+				<p>Sme Vám k dispozícii <span class="text-accent-2">NONSTOP</span></p>
 			</div>
 		</div>
 	</div>

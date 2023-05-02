@@ -6,14 +6,19 @@
 	let logoWrapper: HTMLElement;
 	let mobileMenu: HTMLElement;
 	let mobileMenuOpen = false;
-	// TODO: Fix mobile menu
+	
+	function closeMobileMenu() {
+		if (mobileMenuOpen) {
+			mobileMenu.style.display = 'none';
+			mobileMenuOpen = false;
+		}
+	}
+
 	function toggleMobileMenu() {
 		if (mobileMenuOpen) {
-			console.log('close');
 			mobileMenu.style.display = 'none';
 			mobileMenuOpen = false;
 		} else {
-			console.log('open');
 			mobileMenu.style.display = 'block';
 			mobileMenuOpen = true;
 		}
@@ -21,22 +26,15 @@
 
 	onMount(() => {
 		window.addEventListener('scroll', handleScroll);
-		const scrollY = window.scrollY;
-		if (scrollY > 0) {
-			logoWrapper.style.maxWidth = '220px';
-			logoWrapper.style.padding = '0.5rem 0';
-		} else {
-			logoWrapper.style.maxWidth = '270px';
-			logoWrapper.style.padding = '1rem 0';
-		}
+		handleScroll();
 	});
 
 	function handleScroll() {
 		const scrollY = window.scrollY;
-		if (scrollY > 0) {
+		if (scrollY > 0 && logoWrapper) {
 			logoWrapper.style.maxWidth = '220px';
 			logoWrapper.style.padding = '0.5rem 0';
-		} else {
+		} else if (logoWrapper) {
 			logoWrapper.style.maxWidth = '270px';
 			logoWrapper.style.padding = '1rem 0';
 		}
@@ -45,12 +43,12 @@
 
 <nav class="sticky top-0 z-40 bg-primary border-b border-white">
 	<div class="container mx-auto flex justify-between items-center">
-		<div class="transition-all ease-in-out max-w-[270px] py-4 duration-150" bind:this={logoWrapper}>
+		<a href="/" class="transition-all ease-in-out max-w-[270px] py-4 duration-150" bind:this={logoWrapper}>
 			<img src="/Logo.png" alt="" height="100" width="400" />
-		</div>
+		</a>
 		<ul class="hidden md:flex items-center gap-6">
 			<NavMenuItem href="/" name="Úvod" />
-			<NavMenuItem href="/sluzby" name="Služby" />
+			<!-- <NavMenuItem href="/sluzby" name="Služby" /> -->
 			<NavMenuItem href="/cennik" name="Cenník" />
 			<NavMenuItem href="/kontakt" name="Kontakt" />
 		</ul>
@@ -59,46 +57,24 @@
 		</button>
 	</div>
 </nav>
-<!-- <div class="mobile-menu" bind:this={mobileMenu}>
-	<div class="container-fluid">
-		<div class="container">
-			<button on:click={toggleMobileMenu}>
-				<Icon icon="mdi:close" />
-			</button>
-		</div>
+<div class="fixed top-0 bottom-0 left-0 right-0 hidden bg-primary z-50" bind:this={mobileMenu}>
+	<div class="flex justify-end">
+		<button on:click={toggleMobileMenu} class="text-white flex text-5xl py-4 pr-4">
+			<Icon icon="mdi:close" />
+		</button>
 	</div>
-	<ul>
-		<NavMenuItem href="/" name="Úvod" />
-		<NavMenuItem href="/o-nas" name="O nás" />
-		<NavMenuItem href="/sluzby" name="Služby" />
-		<NavMenuItem href="/kontakt" name="Kontakt" />
+	<ul class="flex flex-col items-center">
+		<NavMenuItem href="/" name="Úvod" clickCallback={closeMobileMenu} />
+		<!-- <NavMenuItem href="/o-nas" name="O nás" />
+		<NavMenuItem href="/sluzby" name="Služby" /> -->
+		<NavMenuItem href="/cennik" name="Cenník" clickCallback={closeMobileMenu} />
+		<NavMenuItem href="/kontakt" name="Kontakt" clickCallback={closeMobileMenu} />
 	</ul>
-</div> -->
+</div>
 
 <style lang="postcss">
 	/* 
-			button {
-				background-color: transparent;
-				color: $text-light;
-				border: none;
-				cursor: pointer;
-				font-size: 3.25em;
-				&:focus {
-					outline: none;
-				}
-			}
-		}
-	}
-	.mobile-menu {
-		z-index: 9999;
-		background-color: $primary;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		display: none;
-		.container-fluid {
+	.container-fluid {
 			background-color: $accent;
 
 			.container {
@@ -120,5 +96,5 @@
 			align-items: center;
 			list-style: none;
 		}
-	} */
+	*/
 </style>

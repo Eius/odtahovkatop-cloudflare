@@ -94,9 +94,9 @@
 	<div class="container grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4" bind:this={targetElement}>
 		{#if visible}
 		{#each numberStats as { icon, number, suffix, text }, index}
-			<div class="col-span-1" transition:fly={{delay: 200, duration: 500, x: -100}}>
+			<div class="col-span-1" in:fly={{delay: 200, duration: 500, x: -100}}>
 				<div class="flex flex-col items-center">
-					<div class="text-accent text-7xl mb-4">
+					<div class="text-accent-1 text-7xl mb-4">
 						<!-- Icon Box -->
 						<Icon {icon} />
 					</div>

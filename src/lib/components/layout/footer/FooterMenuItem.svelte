@@ -17,7 +17,7 @@
 			width: 0;
 			bottom: -2px;
 			right: 0;
-			background-color: theme('colors.accent');
+			background-color: theme('colors.accent.1');
 			transition: width 0.2s ease-in-out;
 		}
 	}

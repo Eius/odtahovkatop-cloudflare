@@ -31,7 +31,7 @@
                 <Divider marginY="mb-4" marginX="mx-0" width="w-[140px]" />
                 <ul class="flex flex-col gap-2 items-center md:items-start">
                     <FooterMenuItem href="/" name="Úvod" />
-                    <FooterMenuItem href="/sluzby" name="Služby" />
+                    <!-- <FooterMenuItem href="/sluzby" name="Služby" /> -->
                     <FooterMenuItem href="/cennik" name="Cenník" />
                     <FooterMenuItem href="/kontakt" name="Kontakt" />
                 </ul>
@@ -45,8 +45,12 @@
                 </h3>
                 <Divider marginY="mb-4" marginX="mx-0" width="w-[144px]" />
                 <ul class="flex flex-col gap-2 items-center md:items-start">
-                    <ContactRow icon="material-symbols:mail-rounded" text={Email} />
-                    <ContactRow icon="material-symbols:phone-enabled" text={PhoneNumber} />
+                    <a href="mailto:{Email}" class="text-white underline">
+                        <ContactRow icon="material-symbols:mail-rounded" text={Email} />
+                    </a>
+                    <a href="tel:{PhoneNumber}" class="text-white underline">
+                        <ContactRow icon="material-symbols:phone-enabled" text={PhoneNumber} />
+                    </a>
                     <ContactRow icon="ic:outline-access-time" text="24 hodín denne, 7 dní v týždni" />
                 </ul>
             </div>

@@ -15,12 +15,18 @@ export default {
     colors: {
       "white": "#f2f2f2",
       "black": "#000000",
-      "gray": "#B4B4B4",
+      "gray": {
+        "1": "#f2f2f2",
+        "2": "#d9d9d9",
+      },
       "yellow": "#F4E04D",
       "facebook": "#1778f2",
       "primary": "#2b2424",
       "secondary": "#161010",
-      "accent": "#d42020",
+      "accent": {
+        "1": "#d42020",
+        "2": "#f2f2f2",
+      },
     },
     breakpoints: {
       sm: "596px",

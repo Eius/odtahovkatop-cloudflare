@@ -57,11 +57,11 @@
         </p>
         <div bind:this={targetElement}>
         {#if visible}
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-6 mt-8" transition:fly={{delay: 200, duration: 500, x: -100}}>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-6 mt-8" in:fly={{delay: 200, duration: 500, x: -100}}>
             {#each services as {icon, title, text}}
                 <div class="col-span-1">
                     <div class="flex flex-col items-center text-black h-full">
-                        <span class="transition-all duration-150 text-accent text-8xl mb-6 hover:scale-110"> <!-- Icon Box -->
+                        <span class="transition-all duration-150 text-accent-1 text-8xl mb-6 hover:scale-110"> <!-- Icon Box -->
                             <Icon icon={icon} />
                         </span>
                         <h5 class="font-bold text-xl mb-4">

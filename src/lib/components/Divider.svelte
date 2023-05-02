@@ -4,4 +4,4 @@
     export let width = "w-[30px]";
 </script>
 
-<div class="h-1 {width} bg-accent {marginX} {marginY} -skew-x-30" />
+<div class="h-1 {width} bg-accent-1 {marginX} {marginY} -skew-x-30" />

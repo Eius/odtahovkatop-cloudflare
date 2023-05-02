@@ -3,9 +3,16 @@
 
 	export let href: string;
 	export let name: string;
+	export let clickCallback: Function | undefined = undefined;
+
+	function onClick() {
+		if (clickCallback) {
+			clickCallback();
+		}
+	}
 </script>
 
-<a {href} class="{$page.url.pathname == href ? 'active' : 'inactive'} py-4 px-3 text-white font-bold text-lg tracking-wide">
+<a {href} class="{$page.url.pathname == href ? 'active' : 'inactive'} py-4 px-3 text-white font-bold text-lg tracking-wide" on:click={onClick} data-sveltekit-preload-data >
 	<li>{name}</li>
 </a>
 
@@ -20,7 +27,7 @@
 			width: 0;
 			bottom: -2px;
 			right: 0;
-			background-color: theme("colors.accent");
+			background-color: theme("colors.accent.1");
 			transition: width 0.2s ease-in-out;
 		}
 	}
