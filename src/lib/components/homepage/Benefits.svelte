@@ -14,9 +14,9 @@
 
     const services: Services[] = [
         {
-            icon: "ic:outline-access-time", 
-            title: "Nonstop", 
-            text: "Sme vám dostupný nepretržite - 24 hodín denne, 7 dní v týždni."
+            icon: "eos-icons:compass", 
+            title: "Pokrytie", 
+            text: "Naše služby poskytujeme po celej Slovenskej republike"
         },
         {
             icon: "material-symbols:speed-outline", 
@@ -24,9 +24,9 @@
             text: "Sme u vás v priebehu 30 minút (Nitra a okolie)"
         },
         {
-            icon: "game-icons:european-flag", 
-            title: "Pokrytie", 
-            text: "Naše služby poskytujeme po celej Slovenskej republike a Európskej únii."
+            icon: "ic:outline-access-time", 
+            title: "Nonstop", 
+            text: "Sme vám dostupný nepretržite - 24 hodín denne, 7 dní v týždni"
         },
     ]
 

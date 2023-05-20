@@ -25,7 +25,7 @@
 		},
         {
 			icon: 'game-icons:path-distance',
-			number: 250,
+			number: 500,
 			suffix: 'tis.',
 			text: 'najazdených kilometrov'
 		},
