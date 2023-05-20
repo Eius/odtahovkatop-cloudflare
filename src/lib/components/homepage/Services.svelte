@@ -81,12 +81,12 @@
                     <div class="col-span-1">
                         {#if link}
                             <a href={link} class="flex flex-col text-center text-black h-full">
-                                <img src={img} alt={title} class="mb-4 image-shadow">
+                                <img src={img} alt={title} class="mb-4 image-shadow" width="350" height="210" loading="lazy">
                                 <h3 class="text-xl font-semibold mb-2 flex-grow uppercase underline">{title}</h3>
                             </a>
                         {:else}
                             <div class="flex flex-col text-center text-black h-full">
-                                <img src={img} alt={title} class="mb-4 image-shadow">
+                                <img src={img} alt={title} class="mb-4 image-shadow"  width="350" height="210" loading="lazy">
                                 <h3 class="text-xl font-semibold mb-2 flex-grow uppercase">{title}</h3>
                             </div>
                         {/if}
