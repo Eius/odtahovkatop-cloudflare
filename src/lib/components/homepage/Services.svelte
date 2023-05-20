@@ -8,6 +8,7 @@
         title: string;
         text: string;
         id: string;
+        link?: string;
     }
 
     const services: Service[] = [
@@ -25,9 +26,10 @@
         },
         {
             img: "/services/autoservis.jpg", 
-            title: "Autoservis/Pneuservis u partnera", 
+            title: "Autoservis u nášho partnera", 
             text: "Proin malesuada volutpat velit id condimentum. Suspendisse nec mi quis turpis convallis aliquet.",
-            id: "2"
+            id: "2",
+            link: "https://sgar-servis.sk"
         },
         {
             img: "/services/stvorkolka.jpg", 
@@ -75,13 +77,19 @@
         <div bind:this={targetElement}>
             {#if visible}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mt-8" in:fly={{delay: 200, duration: 500, x: -100}}>
-                {#each services as {img, title, text, id}}
+                {#each services as {img, title, text, id, link}}
                     <div class="col-span-1">
-                        <div class="flex flex-col text-center text-black h-full">
-                            <img src={img} alt={title} class="mb-4 rounded">
-                            <h1 class="text-3xl mb-2 flex-grow">{title}</h1>
-                            <p>{text}</p>
-                        </div>
+                        {#if link}
+                            <a href={link} class="flex flex-col text-center text-black h-full">
+                                <img src={img} alt={title} class="mb-4 image-shadow">
+                                <h3 class="text-xl font-semibold mb-2 flex-grow uppercase underline">{title}</h3>
+                            </a>
+                        {:else}
+                            <div class="flex flex-col text-center text-black h-full">
+                                <img src={img} alt={title} class="mb-4 image-shadow">
+                                <h3 class="text-xl font-semibold mb-2 flex-grow uppercase">{title}</h3>
+                            </div>
+                        {/if}
                     </div>
                 {/each}
             </div>
@@ -89,3 +97,11 @@
         </div>
 	</div>
 </section>
+
+<style class="postcss">
+    .image-shadow {
+        /* box-shadow: 0 0 5px .1px theme("colors.primary"); */
+        border: 1px solid theme("colors.primary");
+        border-radius: 3px;
+    }
+</style>
