@@ -2,6 +2,23 @@
 	import { onMount } from "svelte";
     import {fly} from 'svelte/transition';
 	import Divider from "../Divider.svelte";
+	import { page } from "$app/stores";
+
+    let serviceEl: HTMLElement | undefined;
+
+    onMount(() => {
+        const scroll = $page.url.searchParams.get("sluzby");
+        if (scroll !== null && serviceEl !== undefined) {
+            setTimeout(() => {
+                window.scroll({
+                    top: serviceEl?.offsetTop,
+                    left: 0,
+                    behavior: "smooth"
+                })
+                console.log("Should scroll")
+            }, 500)
+        }
+    })
 
     interface Service {
         img: string;
@@ -68,7 +85,7 @@
     });
 </script>
 
-<section class="bg-white py-24" id="sluzby">
+<section class="bg-white py-24" bind:this={serviceEl}>
 	<div class="container">
         <h1 class="text-center text-4xl text-black uppercase">
             <span class="font-light">Naše </span><span class="font-bold">služby</span>
@@ -81,12 +98,12 @@
                     <div class="col-span-1">
                         {#if link}
                             <a href={link} class="flex flex-col text-center text-black h-full">
-                                <img src={img} alt={title} class="mb-4 image-shadow" width="350" height="210" loading="lazy">
+                                <img src={img} alt={title} class="mb-4 mx-auto image-shadow" width="350" height="210" loading="lazy">
                                 <h3 class="text-xl font-semibold mb-2 flex-grow uppercase underline">{title}</h3>
                             </a>
                         {:else}
                             <div class="flex flex-col text-center text-black h-full">
-                                <img src={img} alt={title} class="mb-4 image-shadow"  width="350" height="210" loading="lazy">
+                                <img src={img} alt={title} class="mb-4 mx-auto image-shadow"  width="350" height="210" loading="lazy">
                                 <h3 class="text-xl font-semibold mb-2 flex-grow uppercase">{title}</h3>
                             </div>
                         {/if}
