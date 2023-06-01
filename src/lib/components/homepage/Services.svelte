@@ -68,7 +68,7 @@
     });
 </script>
 
-<section class="bg-white py-24">
+<section class="bg-white py-24" id="sluzby">
 	<div class="container">
         <h1 class="text-center text-4xl text-black uppercase">
             <span class="font-light">Naše </span><span class="font-bold">služby</span>
