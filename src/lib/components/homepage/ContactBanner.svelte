@@ -18,9 +18,9 @@
 				<div class="flex items-center mr-2 text-2xl">
 					<Icon icon="material-symbols:phone-iphone" />
 				</div>
-				<p>
+				<p class="underline underline-offset-4">
 					<!-- <span class="inline md:hidden mr-1">Núdzový kontakt:</span> -->
-					<a href="tel:{PhoneNumber}" class="underline text-2xl md:text-lg text-accent-2">{PhoneNumber}</a>
+					<a href="tel:{PhoneNumber}" class="text-xl md:text-base text-accent-2">{PhoneNumber}</a>
 				</p>
 			</div>
 		</div>

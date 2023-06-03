@@ -101,7 +101,7 @@
 						<Icon {icon} />
 					</div>
 					<p class="text-white font-bold text-3xl mb-2" id="stat-{index}">0 {suffix}</p>
-					<p class="text-white text-center uppercase">{text}</p>
+					<p class="text-white text-center text-sm md:text-base uppercase">{text}</p>
 				</div>
 			</div>
 		{/each}

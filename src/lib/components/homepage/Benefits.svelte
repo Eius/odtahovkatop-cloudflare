@@ -52,7 +52,7 @@
             <span class="font-light">Naše </span><span class="font-bold">výhody</span>
         </h1>
         <Divider />
-        <p class="text-black text-center max-w-[500px] mx-auto leading-relaxed">
+        <p class="text-black text-sm md:text-base text-center max-w-[500px] mx-auto leading-relaxed">
             Ponúkame vám rýchlu a odbornú pomoc s každým problémom, ktorý vás môže postihnúť na ceste.
         </p>
         <div bind:this={targetElement}>
@@ -67,7 +67,7 @@
                         <h5 class="font-bold text-xl mb-4">
                             {title}
                         </h5>
-                        <p class="text-center leading-relaxed flex-grow max-w-[220px] md:max-w-none">
+                        <p class="text-center text-sm md:text-base leading-relaxed flex-grow max-w-[220px] md:max-w-none">
                             {@html text}
                         </p>
                     </div>
