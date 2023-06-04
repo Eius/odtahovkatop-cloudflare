@@ -20,7 +20,7 @@
 			title1: 'Sme vám vždy k dispozícii',
 			title2: '24 hodín denne, 7 dní v týždni',
 			text1: 'Rýchla a spoľahlivá odťahová',
-			text2: 'služba po celom Slovensku.'
+			text2: 'služba po celom Nitrianskom kraji.'
 		},	
 		{
 			src: '/home-slide-2.jpg',
@@ -33,54 +33,37 @@
 	];
 </script>
 
-<div class="splide-wrapper">
-	<Splide
-		aria-label="Kolotoč obrázkov na úvodnej stránke"
-		options={{
-			type: 'loop',
-			arrows: false,
-			pagination: false,
-			autoplay: true,
-			interval: 5000
-		}}
-	>
-		{#each slides as {src, alt, title1, title2, text1, text2}}
-		<SplideSlide>
-			<img src={src} alt={alt} width="1600" height="600" class="min-h-[200px] object-cover object-top w-full h-auto" />
-			<div class="absolute top-0 bottom-0 left-0 right-0 flex flex-col justify-center">
-				<div class="container flex flex-col items-{contentAlign}">
-					<h2 class="text-md sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tight leading-tight text-{contentAlign} uppercase mb-3">
-						<span class="text-white font-light">{title1}</span><br>
-						<span class="text-accent-1 font-bold">{title2}</span>
-					</h2>
-					<p class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-snug text-center">
-						<span class="text-white">
-							{text1}<br>
-							{text2}
-						</span>
-					</p>
-				</div>
+<Splide
+	aria-label="Kolotoč obrázkov na úvodnej stránke"
+	options={{
+		type: 'loop',
+		arrows: false,
+		pagination: false,
+		autoplay: true,
+		interval: 5000
+	}}
+>
+	{#each slides as {src, alt, title1, title2, text1, text2}}
+	<SplideSlide>
+		<img src={src} alt={alt} width="1600" height="600" class="min-h-[200px] object-cover object-top w-full h-auto" />
+		<div class="absolute top-0 bottom-0 left-0 right-0 flex flex-col justify-center">
+			<div class="container flex flex-col items-{contentAlign}">
+				<h2 class="text-md sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tight leading-tight text-{contentAlign} uppercase mb-3">
+					<span class="text-white font-light">{title1}</span><br>
+					<span class="text-accent-1 font-bold">{title2}</span>
+				</h2>
+				<p class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-snug text-center">
+					<span class="text-white">
+						{text1}<br>
+						{text2}
+					</span>
+				</p>
 			</div>
-		</SplideSlide>
-		{/each}
-	</Splide>
-    <div class="overlay">
-
-    </div>
-</div>
+		</div>
+	</SplideSlide>
+	{/each}
+</Splide>
 
 <style lang="postcss">
 	
-
-    /* .splide-wrapper {
-        position: relative;
-    }
-
-	img {
-		width: 100%;
-		height: auto;
-		min-height: 210px;
-		object-position: top;
-		object-fit: cover;
-	} */
 </style>

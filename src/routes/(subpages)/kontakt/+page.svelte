@@ -5,12 +5,6 @@
 
 	$: PageTitle.set('Kontakt')
 </script>
-<svelte:head>
-	<!-- Event snippet for Phone call lead conversion page --> 
-	<script> 
-		gtag('event', 'conversion', {'send_to': 'AW-11202024357/tPgBCIeilqcYEKWnxd0p'}); 
-	</script>
-</svelte:head>
 <ContactList />
 <GoogleMap />
 

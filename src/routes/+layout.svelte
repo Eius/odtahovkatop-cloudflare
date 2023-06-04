@@ -14,6 +14,9 @@
 <svelte:head>
 	<title>Odťahovka.TOP Nitra | Odťahová služba</title>
 	<meta name="title" content="Odťahovka.TOP Nitra | Odťahová služba">
+	<meta name="description" content="Máte problém s autom? Potrebujete spoľahlivú odťahovku? 
+	Poskytujeme rýchle a profesionálne služby odťahovky pre osobné vozidlá v okolí Nitry a celej Slovenskej republike. 
+	Kontaktujte nás a zabezpečte si profesionálny odťah vozidla.">
 </svelte:head>
 
 <div class="app">

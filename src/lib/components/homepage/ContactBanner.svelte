@@ -19,7 +19,6 @@
 					<Icon icon="material-symbols:phone-iphone" />
 				</div>
 				<p class="underline underline-offset-4">
-					<!-- <span class="inline md:hidden mr-1">Núdzový kontakt:</span> -->
 					<a href="tel:{PhoneNumber}" class="text-xl md:text-base text-accent-2">{PhoneNumber}</a>
 				</p>
 			</div>
