@@ -10,7 +10,7 @@
 				<div class="flex items-center mr-2 text-2xl">
 					<Icon icon="mdi:tow-truck" />
 				</div>
-				<p>Odťahové služby po celej <span class="text-accent-2">SR</span> a <span class="text-accent-2">EÚ</span></p>
+				<p>Odťahové služby po celej SR</p>
 			</div>
 		</div>
 		<div class="py-2">
