@@ -16,19 +16,19 @@
 	const slides: Slide[] = [
 		{
 			src: '/home-slide-2.jpg',
-			alt: 'Slide 1',
-			title1: 'Ponúkame vám kvalitné',
-			title2: 'odťahové služby',
-			text1: 'Rýchla a spoľahlivá odťahová',
-			text2: 'služba po celom Slovensku.'
-		},
-		{
-			src: '/home-slide-1.jpg',
 			alt: 'Slide 2',
 			title1: 'Sme vám vždy k dispozícii',
 			title2: '24 hodín denne, 7 dní v týždni',
 			text1: 'Rýchla a spoľahlivá odťahová',
 			text2: 'služba po celom Nitrianskom kraji.'
+		},
+		{
+			src: '/home-slide-1.jpg',
+			alt: 'Slide 1',
+			title1: 'Ponúkame vám kvalitné',
+			title2: 'odťahové služby',
+			text1: 'Rýchla a spoľahlivá odťahová',
+			text2: 'služba po celom Slovensku.'
 		},	
 	];
 </script>

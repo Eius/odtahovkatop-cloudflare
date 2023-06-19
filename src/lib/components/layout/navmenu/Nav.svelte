@@ -48,8 +48,7 @@
 		</a>
 		<ul class="hidden md:flex items-center gap-6">
 			<NavMenuItem href="/" name="Úvod" />
-			<!-- <NavMenuItem href="/sluzby" name="Služby" /> -->
-			<NavMenuItem href="/cennik" name="Cenník" />
+			<!-- <NavMenuItem href="/cennik" name="Cenník" /> -->
 			<NavMenuItem href="/kontakt" name="Kontakt" />
 		</ul>
 		<button class="flex md:hidden text-white text-5xl" on:click={toggleMobileMenu}>
