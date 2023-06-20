@@ -64,9 +64,7 @@
 	</div>
 	<ul class="flex flex-col items-center">
 		<NavMenuItem href="/" name="Úvod" clickCallback={closeMobileMenu} />
-		<!-- <NavMenuItem href="/o-nas" name="O nás" />
-		<NavMenuItem href="/sluzby" name="Služby" /> -->
-		<NavMenuItem href="/cennik" name="Cenník" clickCallback={closeMobileMenu} />
+		<!-- <NavMenuItem href="/cennik" name="Cenník" clickCallback={closeMobileMenu} /> -->
 		<NavMenuItem href="/kontakt" name="Kontakt" clickCallback={closeMobileMenu} />
 	</ul>
 </div>
