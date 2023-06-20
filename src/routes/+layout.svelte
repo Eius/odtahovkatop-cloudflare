@@ -17,6 +17,16 @@
 	<meta name="description" content="Máte problém s autom? Potrebujete spoľahlivú odťahovku? 
 	Poskytujeme rýchle a profesionálne služby odťahovky pre osobné vozidlá v okolí Nitry a celej Slovenskej republike. 
 	Kontaktujte nás a zabezpečte si profesionálny odťah vozidla.">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PBCHJ94L5W">
+	</script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-PBCHJ94L5W');
+	</script>
 </svelte:head>
 
 <div class="app">
