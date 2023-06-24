@@ -20,7 +20,7 @@
 					<Icon icon="material-symbols:phone-iphone" />
 				</div>
 				<p class="underline underline-offset-4">
-					<a href="tel:{PhoneNumber}" class="text-xl md:text-base text-accent-2 plausible-event-name=PhoneNumberClick" on:click={() => {plausibleEvent.set("PhoneNumberClick")}}>{PhoneNumber}</a>
+					<a href="tel:{PhoneNumber}" class="text-xl md:text-base text-accent-2 plausible-event-name=PhoneNumberClick">{PhoneNumber}</a>
 				</p>
 			</div>
 		</div>

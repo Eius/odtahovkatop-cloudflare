@@ -46,7 +46,7 @@
                     <p class="text-lg text-center">{contact}</p>
                 </div>
             {/if}
-                <a href={`tel:${PhoneNumber}`} class="col-span-1 flex flex-col gap-2 items-center group" on:click={() => {plausibleEvent.set("PhoneNumberClick")}}>
+                <a href={`tel:${PhoneNumber}`} class="col-span-1 flex flex-col gap-2 items-center group plausible-event-name=PhoneNumberClick">
                     <div class="flex text-5xl text-accent-1 group-hover:scale-110 transition-transform duration-150">
                         <Icon icon="mdi:phone" />
                     </div>
