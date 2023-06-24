@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Email, PhoneNumber } from '$lib/data/ContactInfo';
-	import { plausible } from '$lib/stores/plausibleStore';
+	import { plausibleEvent } from '$lib/stores/eventStore';
     import Icon from '@iconify/svelte';
 
     interface ContactBox {
@@ -24,8 +24,6 @@
             contact: "24 hodín denne, 7 dní v týždni"
         },
     ]
-
-    const { trackEvent } = $plausible;
 </script>
 
 <div class="container py-12">
@@ -48,7 +46,7 @@
                     <p class="text-lg text-center">{contact}</p>
                 </div>
             {/if}
-                <a href={`tel:${PhoneNumber}`} class="col-span-1 flex flex-col gap-2 items-center group" on:click={() => {trackEvent('PhoneNumberClick')}}>
+                <a href={`tel:${PhoneNumber}`} class="col-span-1 flex flex-col gap-2 items-center group" on:click={() => {plausibleEvent.set("PhoneNumberClick")}}>
                     <div class="flex text-5xl text-accent-1 group-hover:scale-110 transition-transform duration-150">
                         <Icon icon="mdi:phone" />
                     </div>

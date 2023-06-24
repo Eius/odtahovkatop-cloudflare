@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { PhoneNumber } from '$lib/data/ContactInfo';
-	import { plausible } from '$lib/stores/plausibleStore';
+	import { plausibleEvent } from '$lib/stores/eventStore';
 	import Icon from '@iconify/svelte';
-
-	const { trackEvent } = $plausible;
 </script>
 
 <div class="bg-secondary text-white">
@@ -22,7 +20,7 @@
 					<Icon icon="material-symbols:phone-iphone" />
 				</div>
 				<p class="underline underline-offset-4">
-					<a href="tel:{PhoneNumber}" class="text-xl md:text-base text-accent-2 plausible-event-name=PhoneNumberClick" on:click={() => {trackEvent("PhoneNumberClick")}}>{PhoneNumber}</a>
+					<a href="tel:{PhoneNumber}" class="text-xl md:text-base text-accent-2 plausible-event-name=PhoneNumberClick" on:click={() => {plausibleEvent.set("PhoneNumberClick")}}>{PhoneNumber}</a>
 				</p>
 			</div>
 		</div>

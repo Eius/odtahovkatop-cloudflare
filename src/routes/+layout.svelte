@@ -9,12 +9,21 @@
 	
 	import Nav from "$lib/components/layout/navmenu/Nav.svelte";
 	import Footer from "$lib/components/layout/footer/Footer.svelte";
-	import { plausible } from "$lib/stores/plausibleStore";
 	import { onMount } from "svelte";
+	import Plausible from "plausible-tracker";
+	import { plausibleEvent } from "$lib/stores/eventStore";
+	import type { Unsubscriber } from "svelte/store";
 	
-	const { enableAutoPageviews } = $plausible;
+	let unsubscribe: Unsubscriber;
+	
 	onMount(() => {
-		enableAutoPageviews();
+		const plausible = Plausible({domain: 'byterise.dev'})
+		plausible.enableAutoPageviews();
+		unsubscribe = plausibleEvent.subscribe((event) => {
+			if(event) {
+				plausible.trackEvent(event);
+			}
+		})
 	})
 </script>
 
