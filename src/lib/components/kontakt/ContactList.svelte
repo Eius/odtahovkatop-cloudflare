@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Email, PhoneNumber } from '$lib/data/ContactInfo';
+	import { plausible } from '$lib/stores/plausibleStore';
     import Icon from '@iconify/svelte';
 
     interface ContactBox {
@@ -22,20 +23,16 @@
             title: 'Nonstop',
             contact: "24 hodín denne, 7 dní v týždni"
         },
-        {
-            href: "tel:",
-            icon: 'mdi:phone',
-            title: 'Zavolajte nám',
-            contact: PhoneNumber
-        }
     ]
+
+    const { trackEvent } = $plausible;
 </script>
 
 <div class="container py-12">
     <div class="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-0">
         {#each contactBoxes as {href, icon, title, contact}}
             {#if href != undefined}
-                <a href={href + contact} class="col-span-1 flex flex-col gap-2 items-center group {href === "tel:" ? "plausible-event-name=PhoneNumberClick" : ""}">
+                <a href={href + contact} class="col-span-1 flex flex-col gap-2 items-center group">
                     <div class="flex text-5xl text-accent-1 group-hover:scale-110 transition-transform duration-150">
                         <Icon icon={icon} />
                     </div>
@@ -51,6 +48,13 @@
                     <p class="text-lg text-center">{contact}</p>
                 </div>
             {/if}
+                <a href={`tel:${PhoneNumber}`} class="col-span-1 flex flex-col gap-2 items-center group" on:click={() => {trackEvent('PhoneNumberClick')}}>
+                    <div class="flex text-5xl text-accent-1 group-hover:scale-110 transition-transform duration-150">
+                        <Icon icon="mdi:phone" />
+                    </div>
+                    <h2 class="text-2xl font-bold">Zavolajte nám</h2>
+                    <p class="text-lg group-hover:underline">{contact}</p>
+                </a>
         {/each}
     </div>
 </div>

@@ -4,6 +4,7 @@
 	import {PageTitle} from '$lib/stores/PageTitleStore'
 
 	$: PageTitle.set('Kontakt')
+
 </script>
 <ContactList />
 <GoogleMap />

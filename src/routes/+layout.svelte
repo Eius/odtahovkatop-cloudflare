@@ -9,6 +9,13 @@
 	
 	import Nav from "$lib/components/layout/navmenu/Nav.svelte";
 	import Footer from "$lib/components/layout/footer/Footer.svelte";
+	import { plausible } from "$lib/stores/plausibleStore";
+	import { onMount } from "svelte";
+	
+	const { enableAutoPageviews } = $plausible;
+	onMount(() => {
+		enableAutoPageviews();
+	})
 </script>
 
 <svelte:head>
