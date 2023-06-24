@@ -35,7 +35,7 @@
     <div class="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-0">
         {#each contactBoxes as {href, icon, title, contact}}
             {#if href != undefined}
-                <a href={href + contact} class="col-span-1 flex flex-col gap-2 items-center group">
+                <a href={href + contact} class="col-span-1 flex flex-col gap-2 items-center group {href === "tel:" ? "plausible-event-name=PhoneNumberClick" : ""}">
                     <div class="flex text-5xl text-accent-1 group-hover:scale-110 transition-transform duration-150">
                         <Icon icon={icon} />
                     </div>
