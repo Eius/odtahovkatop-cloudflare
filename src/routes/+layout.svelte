@@ -16,15 +16,16 @@
 	
 	let unsubscribe: Unsubscriber;
 	
-	onMount(() => {
+	/* onMount(() => {
 		const plausible = Plausible({domain: 'byterise.dev'})
 		plausible.enableAutoPageviews();
 		unsubscribe = plausibleEvent.subscribe((event) => {
 			if(event) {
 				plausible.trackEvent(event);
+				console.log(event);
 			}
 		})
-	})
+	}) */
 </script>
 
 <svelte:head>
