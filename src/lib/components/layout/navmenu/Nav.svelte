@@ -48,10 +48,10 @@
 		</a>
 		<ul class="hidden md:flex items-center gap-6">
 			<NavMenuItem href="/" name="Úvod" />
-			<!-- <NavMenuItem href="/cennik" name="Cenník" /> -->
+			<NavMenuItem href="/cennik" name="Cenník" />
 			<NavMenuItem href="/kontakt" name="Kontakt" />
 		</ul>
-		<button class="flex md:hidden text-white text-5xl" on:click={toggleMobileMenu}>
+		<button class="flex md:hidden text-white text-5xl plausible-event-name=MobileMenuOpen" on:click={toggleMobileMenu}>
 			<Icon icon="mdi:menu" />
 		</button>
 	</div>
@@ -64,7 +64,7 @@
 	</div>
 	<ul class="flex flex-col items-center">
 		<NavMenuItem href="/" name="Úvod" clickCallback={closeMobileMenu} />
-		<!-- <NavMenuItem href="/cennik" name="Cenník" clickCallback={closeMobileMenu} /> -->
+		<NavMenuItem href="/cennik" name="Cenník" clickCallback={closeMobileMenu} />
 		<NavMenuItem href="/kontakt" name="Kontakt" clickCallback={closeMobileMenu} />
 	</ul>
 </div>
