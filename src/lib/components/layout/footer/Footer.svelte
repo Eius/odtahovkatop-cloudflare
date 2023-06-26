@@ -31,7 +31,7 @@
                 <Divider marginY="mb-4" marginX="mx-0" width="w-[140px]" />
                 <ul class="flex flex-col gap-2 items-center md:items-start">
                     <FooterMenuItem href="/" name="Úvod" />
-                    <!-- <FooterMenuItem href="/cennik" name="Cenník" /> -->
+                    <FooterMenuItem href="/cennik" name="Cenník" />
                     <FooterMenuItem href="/kontakt" name="Kontakt" />
                 </ul>
             </div>
