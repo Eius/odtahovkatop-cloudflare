@@ -21,7 +21,7 @@ export const PriceList: PriceGroup[] = [
 		items: [
 			{ name: 'Osobné vozidlá do 1,5t', price: '0,60€/km' },
 			{ name: 'Osobné vozidlá od 1,5t do 2t', price: '0,80€/km' },
-			{ name: 'Dodávky a SUV od 2t do 3t', price: '1,10€/km' },
+			{ name: 'Dodávky a SUV od 2t do 3t', price: '0,80€/km' },
 		]
 	},
 	{
