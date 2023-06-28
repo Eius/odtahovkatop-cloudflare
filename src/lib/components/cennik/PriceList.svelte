@@ -3,6 +3,7 @@
 </script>
 
 <div class="container py-12">
+	<p  class="text-accent-1 font-medium">Ceny sú orientačné, finálna cena bude stanovená pracovníkom osobne.</p>
 	{#each PriceList as { title, items }}
 			<table class="table-fixed w-full mb-4 last-of-type:mb-0">
 				<thead class="border-b-2 border-gray-2">
