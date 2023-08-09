@@ -9,6 +9,11 @@
 <ContactList />
 <GoogleMap />
 
+<svelte:head>
+	<meta name="title" content="Kontakt Odťahovka.TOP | Odťahová služba">
+</svelte:head>
+
+
 <style lang="postcss">
 
 </style>
