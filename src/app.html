@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>	
+	<head>
+		<!-- Fraud Blocker Tracker -->
+		<script type="text/javascript">
+			(function () {
+				var s = document.createElement('script'),
+					h = document.head;
+				s.async = 1;
+				s.src = 'https://monitor.fraudblocker.com/fbt.js?sid=5BmQZsqMrvAlrXmLIEPUL';
+				h.appendChild(s);
+			})();
+		</script>
+		<noscript>
+			<a href="https://fraudblocker.com" rel="nofollow">
+				<img
+					src="https://monitor.fraudblocker.com/fbt.gif?sid=5BmQZsqMrvAlrXmLIEPUL"
+					alt="Fraud Blocker"
+				/>
+			</a>
+		</noscript>
+		<!-- End Fraud Blocker Tracker -->
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 		<!-- Google Tag Manager -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11202024357">
-		</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11202024357"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag() {
+				dataLayer.push(arguments);
+			}
 			gtag('js', new Date());
-		
+
 			gtag('config', 'AW-11202024357');
 		</script>
 		<!-- End Google Tag Manager -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9QZ44XV"
-			height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-W9QZ44XV"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe>
 		</noscript>
-			
+
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
